@@ -1,0 +1,152 @@
+﻿<UserControl xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  x:Class="ProwarenessDashboard.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Height="500" Width="1600" 
+    d:DesignHeight="500" d:DesignWidth="1600" Loaded="UserControl_Loaded">
+
+    
+    
+    
+
+        <!-- Style for the buttons -->
+        <UserControl.Resources>
+            <Style x:Name="ButtonStyle" TargetType="Button">
+                <Setter Property="Height" Value="50" />
+                <Setter Property="Width" Value="100" />
+                <Setter Property="Margin" Value="5" />
+            </Style>
+        </UserControl.Resources>
+
+        <Grid x:Name="LayoutRoot" Background="LightBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="239*" />
+                <ColumnDefinition Width="577*" />
+                <ColumnDefinition Width="784*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- StackPanel to hold the Webcam Control Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="1" Margin="0,0,247,0" Width="330">
+                <Button Style="{StaticResource ButtonStyle}" x:Name="StartButton" Click="StartButton_Click" Content="Start Camera" />
+                <Button Style="{StaticResource ButtonStyle}" x:Name="StopButton" Click="StopButton_Click" Content="Stop Camera" />
+                <Button Style="{StaticResource ButtonStyle}" x:Name="CaptureButton" Click="CaptureButton_Click" Content="Capture Image" />
+            </StackPanel>
+            
+            <!--StackPanel to hold the list of Teams-->
+            <StackPanel Name="TeamsListStackPanel" Grid.RowSpan="2" Orientation="Vertical" HorizontalAlignment="Left" Height="Auto" Width="221">
+                <!--Button to add a Team and it's Statistics-->
+            <Button Name="Team1" Width="220" Click="StartButton_Click">
+                <Grid Margin="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                        
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <sdk:Label Name="lblName" Grid.Row="0" Content="Team - " /> <!--<sdk:Label Name="lblTeamName" Grid.Row="0" Grid.Column="0"  />-->
+                    <sdk:Label Name="lblVelocity" Grid.Row="1" Content="Velocity: " /><!--<sdk:Label Name="lblTeamVelocity" Grid.Row="1" Grid.Column="0" />-->
+                    <sdk:Label Name="lblQuality" Grid.Row="2" Content="Quality:" /><!--<sdk:Label Name="lblTeamQuality" Grid.Row="2" Grid.Column="0" />-->
+                    <sdk:Label Name="lblReliability" Grid.Row="3" Content="Reliability:" /><!--<sdk:Label Name="lblTeamQualityValue" Grid.Row="3" Grid.Column="0" />-->
+
+                    <sdk:Label Name="lblNameValue" Grid.Row="0" Grid.Column="1" Content="CALVI" />
+           
+                    <sdk:Label Name="lblVelocityValue" Grid.Row="1" Grid.Column="1" Content=" 17" Height="15" VerticalAlignment="Top" />
+   
+                    <sdk:Label Name="lblQualityValue" Grid.Row="2" Grid.Column="1" Content=" 60" />
+          
+                    <sdk:Label Name="lblReliabilityValue" Grid.Row="3" Grid.Column="1" Content=" 17/20" />
+  
+                </Grid>
+            </Button>
+
+            <Button Name="Team2" Click="StartButton_Click">
+                <Grid Margin="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                        
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <sdk:Label Name="lblName1" Grid.Row="0" Content="Team - " />
+                    <!--<sdk:Label Name="lblTeamName" Grid.Row="0" Grid.Column="0"  />-->
+                    <sdk:Label Name="lblVelocity1" Grid.Row="1" Content="Velocity: " />
+                    <!--<sdk:Label Name="lblTeamVelocity" Grid.Row="1" Grid.Column="0" />-->
+                    <sdk:Label Name="lblQuality1" Grid.Row="2" Content="Quality:" />
+                    <!--<sdk:Label Name="lblTeamQuality" Grid.Row="2" Grid.Column="0" />-->
+                    <sdk:Label Name="lblReliability1" Grid.Row="3" Content="Reliability:" />
+                    <!--<sdk:Label Name="lblTeamQualityValue" Grid.Row="3" Grid.Column="0" />-->
+
+                    <sdk:Label Name="lblNameValue1" Grid.Row="0" Grid.Column="1" Content="Effectory" />
+
+                    <sdk:Label Name="lblVelocityValue1" Grid.Row="1" Grid.Column="1" Content=" 27" />
+
+                    <sdk:Label Name="lblQualityValue1" Grid.Row="2" Grid.Column="1" Content=" 40" />
+
+                    <sdk:Label Name="lblReliabilityValue1" Grid.Row="3" Grid.Column="1" Content=" 27/27" />
+                </Grid>
+            </Button>
+
+            <Button Name="Team3" Width="220" Click="StartButton_Click">
+                <Grid Margin="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <sdk:Label Name="lblTeam3Name" Grid.Row="0" Content="Team - " />
+                    <!--<sdk:Label Name="lblTeamName" Grid.Row="0" Grid.Column="0"  />-->
+                    <sdk:Label Name="lblTeam3Velocity" Grid.Row="1" Content="Velocity: " />
+                    <!--<sdk:Label Name="lblTeamVelocity" Grid.Row="1" Grid.Column="0" />-->
+                    <sdk:Label Name="lblTeam3Quality" Grid.Row="2" Content="Quality:" />
+                    <!--<sdk:Label Name="lblTeamQuality" Grid.Row="2" Grid.Column="0" />-->
+                    <sdk:Label Name="lblTeam3Reliability" Grid.Row="3" Content="Reliability:" />
+                    <!--<sdk:Label Name="lblTeamQualityValue" Grid.Row="3" Grid.Column="0" />-->
+
+                    <sdk:Label Name="lblTeam3NameValue" Grid.Row="0" Grid.Column="1" Content="Barring Point" />
+
+                    <sdk:Label Name="lblTeam3VelocityValue" Grid.Row="1" Grid.Column="1" Content=" 17" />
+
+                    <sdk:Label Name="lblTeam3QualityValue" Grid.Row="2" Grid.Column="1" Content=" 60" />
+
+                    <sdk:Label Name="lblTeam3ReliabilityValue" Grid.Row="3" Grid.Column="1" Content=" 17/20" />
+
+                </Grid>
+            </Button>
+
+        </StackPanel>
+            <!-- The Fill property will be set to the webCam VideoBrush -->
+            <Rectangle x:Name="webcamDisplay"  Grid.Row="1" Grid.Column="1" Margin="5,10,11,0" Grid.ColumnSpan="2" />
+
+            <!-- This Fill property will be set to the capturedImage ImageBrush  -->
+            <Rectangle x:Name="capturedDisplay" Grid.Row="1" Grid.Column="2"  Margin="9,10,275,0" Width="500" />
+
+        </Grid>
+  
+
+</UserControl>
+    

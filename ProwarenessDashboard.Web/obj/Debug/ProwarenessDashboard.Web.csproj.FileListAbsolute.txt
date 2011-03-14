@@ -1,0 +1,5 @@
+C:\Documents and Settings\nitin\My Documents\Visual Studio 2010\Projects\Silverlight Applications\ProwarenessDashboard.Web\bin\ProwarenessDashboard.Web.dll
+C:\Documents and Settings\nitin\My Documents\Visual Studio 2010\Projects\Silverlight Applications\ProwarenessDashboard.Web\bin\ProwarenessDashboard.Web.pdb
+C:\Documents and Settings\nitin\My Documents\Visual Studio 2010\Projects\Silverlight Applications\ProwarenessDashboard.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\nitin\My Documents\Visual Studio 2010\Projects\Silverlight Applications\ProwarenessDashboard.Web\obj\Debug\ProwarenessDashboard.Web.dll
+C:\Documents and Settings\nitin\My Documents\Visual Studio 2010\Projects\Silverlight Applications\ProwarenessDashboard.Web\obj\Debug\ProwarenessDashboard.Web.pdb

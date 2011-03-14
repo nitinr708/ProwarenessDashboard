@@ -1,0 +1,1 @@
+C:\Documents and Settings\nitin\My Documents\Visual Studio 2010\Projects\Silverlight Applications\ProwarenessDashboard.Web\ProwarenessDashboard.Web.csproj,634353756518886250,Properties\AssemblyInfo.cs,
