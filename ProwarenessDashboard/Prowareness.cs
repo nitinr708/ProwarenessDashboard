@@ -21,7 +21,7 @@ namespace ProwarenessDashboard
             teamsList.Add(new Team("CALVI", 12, 20, 80));
             teamsList.Add(new Team("Yes Telecom", 17, 21, 90));
             teamsList.Add(new Team("Effectory", 25, 25, 20));
-            teamsList.Add(new Team("Bearint Point", 19, 20, 55));
+            teamsList.Add(new Team("Bearing Point", 19, 20, 55));
             teamsList.Add(new Team("AMS-IX", 28, 28, 27));
             return teamsList;
         }

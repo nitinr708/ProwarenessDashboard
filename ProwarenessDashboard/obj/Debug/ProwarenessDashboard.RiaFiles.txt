@@ -1,1 +1,1 @@
-C:\Documents and Settings\nitin\My Documents\Visual Studio 2010\Projects\Silverlight Applications\ProwarenessDashboard\Generated_Code\ProwarenessDashboard.Web.g.cs
+C:\Documents and Settings\nitin\My Documents\ProwarenessDashboard\ProwarenessDashboard\Generated_Code\ProwarenessDashboard.Web.g.cs
