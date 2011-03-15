@@ -15,7 +15,7 @@ namespace ProwarenessDashboard
 {
     public class Prowareness
     {
-        public List<Team> GetTeams()
+        public static List<Team> GetTeams()
         {
             List<Team> teamsList = new List<Team>();
             teamsList.Add(new Team("CALVI", 12, 20, 80));

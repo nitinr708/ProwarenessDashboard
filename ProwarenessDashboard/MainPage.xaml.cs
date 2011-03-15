@@ -13,89 +13,39 @@ using System.Windows.Browser;
 
 namespace ProwarenessDashboard
 {
+    public enum DisplayElement
+    {
+        Frame,
+        Div
+    }
     public partial class MainPage : UserControl
     {
-        public enum DisplayElement
-        {
-            Frame,
-            Div
-        }
-        //HtmlElement theDisplay;
-       // DisplayElement currentDisplay = DisplayElement.Frame;
+
+        HtmlElement theDisplay;
+        DisplayElement currentDisplay = DisplayElement.Frame;
+        //private RoutedEventHandler StartButton_Click;
         public MainPage()
         {
             InitializeComponent();
-            
+            this.SizeChanged += new SizeChangedEventHandler(Page_SizeChanged);
+            //string s = @"<Center><a href='http://google.com'>Go To Silverlight</a></Center><br/>You Can put some HTML here, it will be displayed in the box below";
+            //this.HtmlBox.Text = s;
         }
 
-           // the main object for interacting with the audio/video devices
-        public CaptureSource captureSource;
-
-        // the webcam device
-        public VideoCaptureDevice webcam;
-
-        // brush for the video feed
-        public VideoBrush webcamBrush;
-        Button btnTeam;
-
-        // brush for the captured video frame
-        public ImageBrush capturedImage;
-
+     
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
 
-            /******************************************************/
-            /*Code to Initialize, Render & Control local WebCamera*/
-            /******************************************************/
-            captureSource = new CaptureSource();
-
-            // async capture failed event handler
-            captureSource.CaptureFailed +=
-                new EventHandler<ExceptionRoutedEventArgs>(CaptureSource_CaptureFailed);
-
-            // async capture completed event handler
-            captureSource.CaptureImageCompleted +=
-                new EventHandler<CaptureImageCompletedEventArgs>(CaptureSource_CaptureImageCompleted);
-
-            // get the webcam.  null is returned if there is not a webcam installed
-            webcam = CaptureDeviceConfiguration.GetDefaultVideoCaptureDevice();
-
-            if (null != webcam)
-            {
-                // set the video capture source the WebCam
-                captureSource.VideoCaptureDevice = webcam;
-
-                // set the source on the VideoBrush used to display the video
-                webcamBrush = new VideoBrush();
-                webcamBrush.SetSource(captureSource);
-
-                // set the Fill property of the Rectangle (defined in XAML) to the VideoBrush
-                webcamDisplay.Fill = webcamBrush;
-
-                // the brush used to fill the display rectangle
-                capturedImage = new ImageBrush();
-
-                // set the Fill property of the Rectangle (defined in XAML) to the ImageBrush
-                capturedDisplay.Fill = capturedImage;
-            }
-
-
-
-            Prowareness prowareness = new Prowareness();
-            List<Team> teamsList = prowareness.GetTeams();
-            Team firstTeam = new Team();
+           List<Team> teamsList = Prowareness.GetTeams();
+            
             foreach (Team team in teamsList)
             {
                 addTeamTab(team);
             }
-           
-            //TeamsListStackPanel.Children.Add(second);
-            
-
-
         }
 
-        private void addTeamTab(Team team)
+
+        public void addTeamTab(Team team)
         {
 
             Label label = new Label() { Content = "Team -" };
@@ -145,69 +95,92 @@ namespace ProwarenessDashboard
             btnTeam.Margin = new Thickness(0, 0, 0, 5);
 
             btnTeam.Content = grid;
-            
+
             LoadRightTopPanel(team);
             loadVideoPanel(team);
-
-            
-            
-
-            TeamsListStackPanel.Children.Add(btnTeam);
+            TeamsListStackPanel.Children.Add(btnTeam); 
         }
 
-        private void loadVideoPanel(Team team)
+        public void loadVideoPanel(Team team)
         {
+            
 
             btnTeam.Click += new RoutedEventHandler(StartButton_Click);
         }
 
-      
-        
+
+
         private void LoadRightTopPanel(Team team)
         {
-            
+
         }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            // request access to the device and verify the VideoCaptureDevice is not null
-            if(CaptureDeviceConfiguration.RequestDeviceAccess() && captureSource.VideoCaptureDevice != null )
+            String calviVideoUrl = "http://192.168.1.201/view/viewer_index.shtml?id=5";
+
+            if (currentDisplay != DisplayElement.Frame)
             {
-                captureSource.Start();
+                currentDisplay = DisplayElement.Frame;
+                theDisplay.SetStyleAttribute("visibility", "hidden");
+                PositionElement();
             }
+            theDisplay.SetAttribute("src", calviVideoUrl);
         }
 
-        private void StopButton_Click(object sender, RoutedEventArgs e)
+        void Page_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            // verify the VideoCaptureDevice is not null
-            if (captureSource.VideoCaptureDevice != null)
+            PositionElement();
+        }
+
+        void FrameContainer_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            PositionElement();
+        }
+
+      
+        void PositionElement()
+        {
+            if (currentDisplay == DisplayElement.Frame)
             {
-                captureSource.Stop();
+                theDisplay = HtmlPage.Document.GetElementById("theFrame");
+                if (theDisplay == null)
+                {
+                    theDisplay = HtmlPage.Document.CreateElement("IFrame");
+                    theDisplay.SetAttribute("ID", "theFrame");
+                    HtmlPage.Document.Body.AppendChild(theDisplay);
+                }
             }
-        }
-
-        private void CaptureButton_Click(object sender, RoutedEventArgs e)
-        {
-            // verify the VideoCaptureDevice is not null and the device is started
-            if (captureSource.VideoCaptureDevice != null && captureSource.State == CaptureState.Started)
+            else
             {
-                captureSource.CaptureImageAsync();
+                theDisplay = HtmlPage.Document.GetElementById("theDiv");
+                if (theDisplay == null)
+                {
+                    theDisplay = HtmlPage.Document.CreateElement("Div");
+                    theDisplay.SetAttribute("ID", "theDiv");
+                    theDisplay.SetStyleAttribute("backgroundColor", "white");
+                    theDisplay.SetStyleAttribute("borderWidth", "1px");
+                    theDisplay.SetStyleAttribute("borderColor", "black");
+                    theDisplay.SetStyleAttribute("borderStyle", "solid");
+
+                    HtmlPage.Document.Body.AppendChild(theDisplay);
+                }
             }
+            theDisplay.SetStyleAttribute("position", "absolute");
+            Point topleft = Position.GetAbsolutePosition(this.FrameContainer);
+            int controlTop = (int)topleft.Y;
+            int controlLeft = (int)topleft.X;
+
+            theDisplay.SetStyleAttribute("left", controlLeft.ToString() + "px");
+            theDisplay.SetStyleAttribute("top", controlTop.ToString() + "px");
+            theDisplay.SetStyleAttribute("visibility", "visible");
+            theDisplay.SetStyleAttribute("width", this.FrameContainer.ActualWidth.ToString() + "px");
+            theDisplay.SetStyleAttribute("height", this.FrameContainer.ActualHeight.ToString() + "px");
         }
 
-        void CaptureSource_CaptureImageCompleted(object sender, CaptureImageCompletedEventArgs e)
-        {
-            // Set the ImageBrush source to the WriteableBitmap passed in through the event arguments
-            capturedImage.ImageSource = e.Result;
-        }
-
-        void CaptureSource_CaptureFailed(object sender, ExceptionRoutedEventArgs e)
-        {
-            MessageBox.Show(string.Format("Failed to capture image: {0}", e.ErrorException.Message));
-        }
+        public Button btnTeam { get; set; }
     }
 }
-
 
 
 
