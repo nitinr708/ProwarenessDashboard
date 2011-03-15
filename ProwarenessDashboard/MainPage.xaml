@@ -39,9 +39,9 @@
             </StackPanel>
             
             <!--StackPanel to hold the list of Teams-->
-            <StackPanel Name="TeamsListStackPanel" Grid.RowSpan="2" Orientation="Vertical" HorizontalAlignment="Left" Height="Auto" Width="221">
+            <StackPanel Name="TeamsListStackPanel" Grid.RowSpan="2" Orientation="Vertical" HorizontalAlignment="Left" Height="Auto" Width="221" Margin="6">
                 <!--Button to add a Team and it's Statistics-->
-            <Button Name="Team1" Width="220" Click="StartButton_Click">
+            <!--<Button Name="Team1" Width="220" Click="StartButton_Click">
                 <Grid Margin="2">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="15"></RowDefinition>
@@ -55,10 +55,10 @@
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <sdk:Label Name="lblName" Grid.Row="0" Content="Team - " /> <!--<sdk:Label Name="lblTeamName" Grid.Row="0" Grid.Column="0"  />-->
-                    <sdk:Label Name="lblVelocity" Grid.Row="1" Content="Velocity: " /><!--<sdk:Label Name="lblTeamVelocity" Grid.Row="1" Grid.Column="0" />-->
-                    <sdk:Label Name="lblQuality" Grid.Row="2" Content="Quality:" /><!--<sdk:Label Name="lblTeamQuality" Grid.Row="2" Grid.Column="0" />-->
-                    <sdk:Label Name="lblReliability" Grid.Row="3" Content="Reliability:" /><!--<sdk:Label Name="lblTeamQualityValue" Grid.Row="3" Grid.Column="0" />-->
+                    <sdk:Label Name="lblName" Grid.Row="0" Content="Team - " /> 
+                    <sdk:Label Name="lblVelocity" Grid.Row="1" Content="Velocity: " />
+                    <sdk:Label Name="lblQuality" Grid.Row="2" Content="Quality:" />
+                    <sdk:Label Name="lblReliability" Grid.Row="3" Content="Reliability:" />
 
                     <sdk:Label Name="lblNameValue" Grid.Row="0" Grid.Column="1" Content="CALVI" />
            
@@ -86,13 +86,13 @@
                     </Grid.ColumnDefinitions>
 
                     <sdk:Label Name="lblName1" Grid.Row="0" Content="Team - " />
-                    <!--<sdk:Label Name="lblTeamName" Grid.Row="0" Grid.Column="0"  />-->
+                    
                     <sdk:Label Name="lblVelocity1" Grid.Row="1" Content="Velocity: " />
-                    <!--<sdk:Label Name="lblTeamVelocity" Grid.Row="1" Grid.Column="0" />-->
+                    
                     <sdk:Label Name="lblQuality1" Grid.Row="2" Content="Quality:" />
-                    <!--<sdk:Label Name="lblTeamQuality" Grid.Row="2" Grid.Column="0" />-->
+                    
                     <sdk:Label Name="lblReliability1" Grid.Row="3" Content="Reliability:" />
-                    <!--<sdk:Label Name="lblTeamQualityValue" Grid.Row="3" Grid.Column="0" />-->
+                    
 
                     <sdk:Label Name="lblNameValue1" Grid.Row="0" Grid.Column="1" Content="Effectory" />
 
@@ -119,13 +119,13 @@
                     </Grid.ColumnDefinitions>
 
                     <sdk:Label Name="lblTeam3Name" Grid.Row="0" Content="Team - " />
-                    <!--<sdk:Label Name="lblTeamName" Grid.Row="0" Grid.Column="0"  />-->
+                    
                     <sdk:Label Name="lblTeam3Velocity" Grid.Row="1" Content="Velocity: " />
-                    <!--<sdk:Label Name="lblTeamVelocity" Grid.Row="1" Grid.Column="0" />-->
+                    
                     <sdk:Label Name="lblTeam3Quality" Grid.Row="2" Content="Quality:" />
-                    <!--<sdk:Label Name="lblTeamQuality" Grid.Row="2" Grid.Column="0" />-->
+                    
                     <sdk:Label Name="lblTeam3Reliability" Grid.Row="3" Content="Reliability:" />
-                    <!--<sdk:Label Name="lblTeamQualityValue" Grid.Row="3" Grid.Column="0" />-->
+                    
 
                     <sdk:Label Name="lblTeam3NameValue" Grid.Row="0" Grid.Column="1" Content="Barring Point" />
 
@@ -136,13 +136,15 @@
                     <sdk:Label Name="lblTeam3ReliabilityValue" Grid.Row="3" Grid.Column="1" Content=" 17/20" />
 
                 </Grid>
-            </Button>
+            </Button>-->
 
         </StackPanel>
             <!-- The Fill property will be set to the webCam VideoBrush -->
             <Rectangle x:Name="webcamDisplay"  Grid.Row="1" Grid.Column="1" Margin="5,10,11,0" Grid.ColumnSpan="2" />
+        <!--<Grid Grid.Row="1" x:Name="FrameContainer" Background="Blue">
+        </Grid>-->
 
-            <!-- This Fill property will be set to the capturedImage ImageBrush  -->
+        <!-- This Fill property will be set to the capturedImage ImageBrush  -->
             <Rectangle x:Name="capturedDisplay" Grid.Row="1" Grid.Column="2"  Margin="9,10,275,0" Width="500" />
 
         </Grid>

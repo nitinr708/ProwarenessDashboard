@@ -9,11 +9,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using System.Windows.Browser;
 
 namespace ProwarenessDashboard
 {
     public partial class MainPage : UserControl
     {
+        public enum DisplayElement
+        {
+            Frame,
+            Div
+        }
+        //HtmlElement theDisplay;
+       // DisplayElement currentDisplay = DisplayElement.Frame;
         public MainPage()
         {
             InitializeComponent();
@@ -28,6 +36,7 @@ namespace ProwarenessDashboard
 
         // brush for the video feed
         public VideoBrush webcamBrush;
+        Button btnTeam;
 
         // brush for the captured video frame
         public ImageBrush capturedImage;
@@ -72,80 +81,91 @@ namespace ProwarenessDashboard
 
 
 
-            List<Team> teamsList = Team.GetList();
-            
-            Label label = new Label()
+            Prowareness prowareness = new Prowareness();
+            List<Team> teamsList = prowareness.GetTeams();
+            Team firstTeam = new Team();
+            foreach (Team team in teamsList)
             {
-                    Content = "Team -"//,
-                    //Width = 40,
-                    //Height = 32,
-                    //Margin = new Thickness(14, 4, 0, 0),
-                    //HorizontalAlignment = HorizontalAlignment.Left,
-                    //VerticalAlignment = VerticalAlignment.Top,
-                    //HorizontalContentAlignment = HorizontalAlignment.Center,
-                    //VerticalContentAlignment = VerticalAlignment.Center,
-                    //BorderBrush = Brushes.Black,
-                    //BorderThickness = new Thickness(1),
-                    //Name = "label16"
-            };
-            Label label2 = new Label() { Content = "Velocity:" };
-            Label label3 = new Label() { Content = "Quality:" };
-            Label label4 = new Label() { Content = "Reliability:" }; 
-            Label label5 = new Label() { Content = "NETGEAR" }; 
-            Label label6 = new Label() { Content = "18" };
-            Label label7 = new Label() { Content = "1" }; 
-            Label label8 = new Label() { Content = "10" }; 
-
-
-        Grid grid = new Grid();
-        //grid.Width = 768;
-        //grid.Height = 1056;
-        grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(15) });
-        grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(15) });
-        grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(15) });
-        grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(15) });
-        grid.ColumnDefinitions.Add(new ColumnDefinition());
-        grid.ColumnDefinitions.Add(new ColumnDefinition());
-        Grid.SetRow(label, 0);
-        Grid.SetRow(label2, 1);
-        Grid.SetRow(label3, 2); 
-        Grid.SetRow(label4, 3);
-        Grid.SetRow(label5, 0);
-        Grid.SetColumn(label5, 1);
-        Grid.SetRow(label6, 1);
-        Grid.SetColumn(label6, 1);
-        Grid.SetRow(label7, 2);
-        Grid.SetColumn(label7, 1);
-        Grid.SetRow(label8, 3);
-        Grid.SetColumn(label8, 1);
-
-        grid.Children.Add(label);
-        grid.Children.Add(label3);
-        grid.Children.Add(label4);
-        grid.Children.Add(label2);
-        grid.Children.Add(label5);
-        grid.Children.Add(label6);
-        grid.Children.Add(label7);
-        grid.Children.Add(label8);
-        //this.Content = grid;
-
-
- 
-            
-            Button first = new Button();
-
-            //Grid firstGrid = new Grid();
-            //firstGrid.RowDefinitions.Add(Row
-
-            //Button second = new Button();
-
-            first.Content = grid;
-
-            TeamsListStackPanel.Children.Add(first);
+                addTeamTab(team);
+            }
+           
             //TeamsListStackPanel.Children.Add(second);
             
 
 
+        }
+
+        private void addTeamTab(Team team)
+        {
+
+            Label label = new Label() { Content = "Team -" };
+            Label label2 = new Label() { Content = "Velocity:" };
+            Label label3 = new Label() { Content = "Quality:" };
+            Label label4 = new Label() { Content = "Reliability:" };
+            Label label5 = new Label() { Content = team.name.ToString() };
+            Label label6 = new Label() { Content = team.velocity.ToString() };
+            Label label7 = new Label() { Content = team.quality.ToString() };
+            Label label8 = new Label() { Content = team.reliability.ToString() };
+
+
+            Grid grid = new Grid();
+
+            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(15) });
+            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(15) });
+            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(15) });
+            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(15) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition());
+            grid.ColumnDefinitions.Add(new ColumnDefinition());
+            Grid.SetRow(label, 0);
+            Grid.SetRow(label2, 1);
+            Grid.SetRow(label3, 2);
+            Grid.SetRow(label4, 3);
+            Grid.SetRow(label5, 0);
+            Grid.SetColumn(label5, 1);
+            Grid.SetRow(label6, 1);
+            Grid.SetColumn(label6, 1);
+            Grid.SetRow(label7, 2);
+            Grid.SetColumn(label7, 1);
+            Grid.SetRow(label8, 3);
+            Grid.SetColumn(label8, 1);
+
+            grid.Children.Add(label);
+            grid.Children.Add(label3);
+            grid.Children.Add(label4);
+            grid.Children.Add(label2);
+            grid.Children.Add(label5);
+            grid.Children.Add(label6);
+            grid.Children.Add(label7);
+            grid.Children.Add(label8);
+
+
+            btnTeam = new Button();
+            btnTeam.HorizontalContentAlignment = HorizontalAlignment.Left;
+
+            btnTeam.Margin = new Thickness(0, 0, 0, 5);
+
+            btnTeam.Content = grid;
+            
+            LoadRightTopPanel(team);
+            loadVideoPanel(team);
+
+            
+            
+
+            TeamsListStackPanel.Children.Add(btnTeam);
+        }
+
+        private void loadVideoPanel(Team team)
+        {
+
+            btnTeam.Click += new RoutedEventHandler(StartButton_Click);
+        }
+
+      
+        
+        private void LoadRightTopPanel(Team team)
+        {
+            
         }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
