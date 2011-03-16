@@ -48,14 +48,14 @@ namespace ProwarenessDashboard
         public void addTeamTab(Team team)
         {
 
-            Label label = new Label() { Content = "Team -" };
-            Label label2 = new Label() { Content = "Velocity:" };
-            Label label3 = new Label() { Content = "Quality:" };
-            Label label4 = new Label() { Content = "Reliability:" };
-            Label label5 = new Label() { Content = team.name.ToString() };
-            Label label6 = new Label() { Content = team.velocity.ToString() };
-            Label label7 = new Label() { Content = team.quality.ToString() };
-            Label label8 = new Label() { Content = team.reliability.ToString() };
+            Label Label = new Label() { Content = "Team -" };
+            Label lblVelocity = new Label() { Content = "Velocity:" };
+            Label lblQuality = new Label() { Content = "Quality:" };
+            Label lblReliability = new Label() { Content = "Reliability:" };
+            Label lblTeamName = new Label() { Content = team.name.ToString() };
+            Label lblTeamVelocity = new Label() { Content = team.velocity.ToString() };
+            Label lblTeamQuality = new Label() { Content = team.quality.ToString() };
+            Label lblTeamReliability = new Label() { Content = team.reliability.ToString() };
 
 
             Grid grid = new Grid();
@@ -66,27 +66,27 @@ namespace ProwarenessDashboard
             grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(15) });
             grid.ColumnDefinitions.Add(new ColumnDefinition());
             grid.ColumnDefinitions.Add(new ColumnDefinition());
-            Grid.SetRow(label, 0);
-            Grid.SetRow(label2, 1);
-            Grid.SetRow(label3, 2);
-            Grid.SetRow(label4, 3);
-            Grid.SetRow(label5, 0);
-            Grid.SetColumn(label5, 1);
-            Grid.SetRow(label6, 1);
-            Grid.SetColumn(label6, 1);
-            Grid.SetRow(label7, 2);
-            Grid.SetColumn(label7, 1);
-            Grid.SetRow(label8, 3);
-            Grid.SetColumn(label8, 1);
+            Grid.SetRow(Label, 0);
+            Grid.SetRow(lblVelocity, 1);
+            Grid.SetRow(lblQuality, 2);
+            Grid.SetRow(lblReliability, 3);
+            Grid.SetRow(lblTeamName, 0);
+            Grid.SetColumn(lblTeamName, 1);
+            Grid.SetRow(lblTeamVelocity, 1);
+            Grid.SetColumn(lblTeamVelocity, 1);
+            Grid.SetRow(lblTeamQuality, 2);
+            Grid.SetColumn(lblTeamQuality, 1);
+            Grid.SetRow(lblTeamReliability, 3);
+            Grid.SetColumn(lblTeamReliability, 1);
 
-            grid.Children.Add(label);
-            grid.Children.Add(label3);
-            grid.Children.Add(label4);
-            grid.Children.Add(label2);
-            grid.Children.Add(label5);
-            grid.Children.Add(label6);
-            grid.Children.Add(label7);
-            grid.Children.Add(label8);
+            grid.Children.Add(Label);
+            grid.Children.Add(lblQuality);
+            grid.Children.Add(lblReliability);
+            grid.Children.Add(lblVelocity);
+            grid.Children.Add(lblTeamName);
+            grid.Children.Add(lblTeamVelocity);
+            grid.Children.Add(lblTeamQuality);
+            grid.Children.Add(lblTeamReliability);
 
 
             btnTeam = new Button();
