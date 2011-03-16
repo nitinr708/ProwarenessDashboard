@@ -23,6 +23,7 @@ namespace ProwarenessDashboard
 
         HtmlElement theDisplay;
         DisplayElement currentDisplay = DisplayElement.Frame;
+        
         //private RoutedEventHandler StartButton_Click;
         public MainPage()
         {
@@ -98,14 +99,14 @@ namespace ProwarenessDashboard
 
             LoadRightTopPanel(team);
             loadVideoPanel(team);
+            btnTeam.CommandParameter = team.videoUrl;
             TeamsListStackPanel.Children.Add(btnTeam); 
         }
 
         public void loadVideoPanel(Team team)
         {
-            
-
             btnTeam.Click += new RoutedEventHandler(StartButton_Click);
+            
         }
 
 
@@ -117,7 +118,8 @@ namespace ProwarenessDashboard
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            String calviVideoUrl = "http://192.168.1.201/view/viewer_index.shtml?id=5";
+            Button team = (Button) sender;
+            string videoUrl =  team.CommandParameter.ToString();
 
             if (currentDisplay != DisplayElement.Frame)
             {
@@ -125,7 +127,8 @@ namespace ProwarenessDashboard
                 theDisplay.SetStyleAttribute("visibility", "hidden");
                 PositionElement();
             }
-            theDisplay.SetAttribute("src", calviVideoUrl);
+
+            theDisplay.SetAttribute("src",videoUrl);
         }
 
         void Page_SizeChanged(object sender, SizeChangedEventArgs e)
