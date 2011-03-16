@@ -12,15 +12,15 @@
     
 
         <!-- Style for the buttons -->
-        <UserControl.Resources>
+        <!--<UserControl.Resources>
             <Style x:Name="ButtonStyle" TargetType="Button">
-                <Setter Property="Height" Value="50" />
-                <Setter Property="Width" Value="100" />
+                <Setter Property="Height" Value="70" />
+                <Setter Property="Width" Value="160" />
                 <Setter Property="Margin" Value="5" />
             </Style>
-        </UserControl.Resources>
+        </UserControl.Resources>-->
 
-        <Grid x:Name="LayoutRoot" Background="#FFBA6435" Height="Auto">
+        <Grid Background="#FFBA6435" Height="Auto">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="239*" />
                 <ColumnDefinition Width="1248*" />
@@ -37,7 +37,7 @@
             </StackPanel>
             
             <!--StackPanel to hold the list of Teams-->
-            <StackPanel Name="TeamsListStackPanel" Grid.RowSpan="2" Orientation="Vertical" HorizontalAlignment="Left" Height="Auto" Width="221" Margin="6">
+            <StackPanel Name="TeamsListStackPanel" Grid.RowSpan="2" Orientation="Vertical" HorizontalAlignment="Left" Height="Auto" Width="211" Margin="3,3,3,6">
                 <!--Button to add a Team and it's Statistics-->
             
 

@@ -50,22 +50,22 @@ namespace ProwarenessDashboard
         public void addTeamTab(Team team)
         {
 
-            Label Label = new Label() { Content = "Team -" };
-            Label lblVelocity = new Label() { Content = "Velocity:" };
-            Label lblQuality = new Label() { Content = "Quality:" };
-            Label lblReliability = new Label() { Content = "Reliability:" };
-            Label lblTeamName = new Label() { Content = team.name.ToString() };
-            Label lblTeamVelocity = new Label() { Content = team.velocity.ToString() };
-            Label lblTeamQuality = new Label() { Content = team.quality.ToString() };
-            Label lblTeamReliability = new Label() { Content = team.reliability.ToString() };
+            Label Label = new Label() { Content = "Team -", Margin = new Thickness(5,0,0,0) };
+            Label lblVelocity = new Label() { Content = "Velocity:", Margin = new Thickness(5, 0, 0, 0) };
+            Label lblQuality = new Label() { Content = "Quality:", Margin = new Thickness(5, 0, 0, 0) };
+            Label lblReliability = new Label() { Content = "Reliability:", Margin = new Thickness(5, 0, 0, 0) };
+            Label lblTeamName = new Label() { Content = team.name.ToString(), Margin = new Thickness(5, 0, 0, 0) };
+            Label lblTeamVelocity = new Label() { Content = team.velocity.ToString(), Margin = new Thickness(5, 0, 0, 0) };
+            Label lblTeamQuality = new Label() { Content = team.quality.ToString(), Margin = new Thickness(5, 0, 0, 0) };
+            Label lblTeamReliability = new Label() { Content = team.reliability.ToString(), Margin = new Thickness(5, 0, 0, 0) };
 
 
             Grid grid = new Grid();
 
-            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(15) });
-            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(15) });
-            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(15) });
-            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(15) });
+            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(20) });
+            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(20) });
+            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(20) });
+            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(20) });
             grid.ColumnDefinitions.Add(new ColumnDefinition());
             grid.ColumnDefinitions.Add(new ColumnDefinition());
             Grid.SetRow(Label, 0);
@@ -94,9 +94,11 @@ namespace ProwarenessDashboard
             btnTeam = new Button();
             btnTeam.HorizontalContentAlignment = HorizontalAlignment.Left;
 
-            btnTeam.Margin = new Thickness(0, 0, 0, 5);
+            btnTeam.Margin = new Thickness(6, 6, 0, 6);
 
             btnTeam.Content = grid;
+            btnTeam.Background = new SolidColorBrush(Colors.Orange);
+            btnTeam.BorderBrush = new SolidColorBrush(Colors.LightGray);
             btnTeam.Click += new RoutedEventHandler(StartButton_Click);
             LoadRightTopPanel(team);
             loadVideoPanel(team);
@@ -127,13 +129,16 @@ namespace ProwarenessDashboard
                 if (eachButton != senderButton)
                 {
                     eachButton.BorderThickness = new Thickness(0);
+		            eachButton.Background = new SolidColorBrush(Colors.Orange);
                     eachButton.BorderBrush = new SolidColorBrush(Colors.LightGray);
+                    eachButton.FontWeight = FontWeights.Normal;
                 }
             }
 
             senderButton.BorderThickness = new Thickness(5);
-            senderButton.Background = new SolidColorBrush(Colors.Orange);
-            senderButton.BorderBrush = new SolidColorBrush(Colors.Gray);
+            senderButton.Background = new SolidColorBrush(Colors.White);
+            senderButton.FontWeight = FontWeights.ExtraBold;
+            senderButton.BorderBrush = new SolidColorBrush(Colors.Black);
             Button team = (Button) sender;
             string videoUrl =  team.CommandParameter.ToString();
 
