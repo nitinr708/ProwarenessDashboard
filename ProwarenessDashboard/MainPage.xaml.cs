@@ -29,6 +29,7 @@ namespace ProwarenessDashboard
         {
             InitializeComponent();
             this.SizeChanged += new SizeChangedEventHandler(Page_SizeChanged);
+            
             //string s = @"<Center><a href='http://google.com'>Go To Silverlight</a></Center><br/>You Can put some HTML here, it will be displayed in the box below";
             //this.HtmlBox.Text = s;
         }
@@ -96,7 +97,7 @@ namespace ProwarenessDashboard
             btnTeam.Margin = new Thickness(0, 0, 0, 5);
 
             btnTeam.Content = grid;
-
+            btnTeam.Click += new RoutedEventHandler(StartButton_Click);
             LoadRightTopPanel(team);
             loadVideoPanel(team);
             btnTeam.CommandParameter = team.videoUrl;
@@ -105,7 +106,7 @@ namespace ProwarenessDashboard
 
         public void loadVideoPanel(Team team)
         {
-            btnTeam.Click += new RoutedEventHandler(StartButton_Click);
+            //btnTeam.Click += new RoutedEventHandler(StartButton_Click);
             
         }
 
@@ -118,6 +119,21 @@ namespace ProwarenessDashboard
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
+
+            //this.btnTeam.Background = new SolidColorBrush(Colors.Red);
+            Button senderButton = sender as Button;
+            foreach (Button eachButton in TeamsListStackPanel.Children)
+            {
+                if (eachButton != senderButton)
+                {
+                    eachButton.BorderThickness = new Thickness(0);
+                    eachButton.BorderBrush = new SolidColorBrush(Colors.LightGray);
+                }
+            }
+
+            senderButton.BorderThickness = new Thickness(2);
+            senderButton.Background = new SolidColorBrush(Colors.Black);
+            senderButton.BorderBrush = new SolidColorBrush(Colors.Red);
             Button team = (Button) sender;
             string videoUrl =  team.CommandParameter.ToString();
 
