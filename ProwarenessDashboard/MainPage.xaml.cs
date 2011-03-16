@@ -131,9 +131,9 @@ namespace ProwarenessDashboard
                 }
             }
 
-            senderButton.BorderThickness = new Thickness(2);
-            senderButton.Background = new SolidColorBrush(Colors.Black);
-            senderButton.BorderBrush = new SolidColorBrush(Colors.Red);
+            senderButton.BorderThickness = new Thickness(5);
+            senderButton.Background = new SolidColorBrush(Colors.Orange);
+            senderButton.BorderBrush = new SolidColorBrush(Colors.Gray);
             Button team = (Button) sender;
             string videoUrl =  team.CommandParameter.ToString();
 
