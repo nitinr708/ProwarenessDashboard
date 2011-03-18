@@ -12,8 +12,9 @@ using System.Windows.Shapes;
 using System.Windows.Browser;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.Charting;
-using Telerik.Windows.Examples;
-using System.Windows.Navigation;
+using System.Collections.Generic;
+using System.Windows;
+using System.Windows.Controls;
 
 
 
@@ -39,9 +40,70 @@ namespace ProwarenessDashboard
             InitializeComponent();
             //this.FillSampleChartData();
             this.SizeChanged += new SizeChangedEventHandler(Page_SizeChanged);
-            
+            VelocityChart.Loaded += new RoutedEventHandler(VelocityUC_Loaded);
+            BurnDown.Loaded += new RoutedEventHandler(BurnLoadUC_Loaded);
+            QualityChart.Loaded += new RoutedEventHandler(QualityUC_Loaded);
           
         }
+
+        void BurnLoadUC_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<BurnDownTrend> burndown = new List<BurnDownTrend>();
+            burndown.Add(new BurnDownTrend() { Day = "Mon", Points = 60 });
+            burndown.Add(new BurnDownTrend() { Day = "Tue", Points = 50 });
+            burndown.Add(new BurnDownTrend() { Day = "Wed", Points = 40 });
+            burndown.Add(new BurnDownTrend() { Day = "Thu", Points = 30 });
+            burndown.Add(new BurnDownTrend() { Day = "Fri", Points = 20 });
+            burndown.Add(new BurnDownTrend() { Day = "Mon", Points = 60 });
+            burndown.Add(new BurnDownTrend() { Day = "Tue", Points = 50 });
+            burndown.Add(new BurnDownTrend() { Day = "Wed", Points = 40 });
+            burndown.Add(new BurnDownTrend() { Day = "Thu", Points = 30 });
+            burndown.Add(new BurnDownTrend() { Day = "Fri", Points = 20 });
+            //this.DataContext = burndown;
+            BurnDown.DataContext = burndown;
+        }
+
+
+        void VelocityUC_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<VelocityTrend> velocity = new List<VelocityTrend>();
+            velocity.Add(new VelocityTrend() { SprintName = "Sprint 1", Velocity = 28 });
+            velocity.Add(new VelocityTrend() { SprintName = "Sprint 2", Velocity = 34 });
+            velocity.Add(new VelocityTrend() { SprintName = "Sprint 3", Velocity = 17 });
+            velocity.Add(new VelocityTrend() { SprintName = "Sprint 4", Velocity = 22 });
+
+            VelocityChart.DataContext = velocity;
+        }
+
+        void QualityUC_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<QualityTrend> quality = new List<QualityTrend>();
+            quality.Add(new QualityTrend() { SprintName = "Sprint 1", Quality = 10 });
+            quality.Add(new QualityTrend() { SprintName = "Sprint 2", Quality = 40 });
+            quality.Add(new QualityTrend() { SprintName = "Sprint 3", Quality = 120 });
+            quality.Add(new QualityTrend() { SprintName = "Sprint 4", Quality = 100 });
+
+            QualityChart.DataContext = quality;
+        }
+
+        public class BurnDownTrend
+        {
+            public string Day { get; set; }
+            public int Points { get; set; }
+        }
+
+        public class VelocityTrend
+        {
+            public string SprintName { get; set; }
+            public int Velocity { get; set; }
+        }
+
+        public class QualityTrend
+        {
+            public string SprintName { get; set; }
+            public int Quality { get; set; }
+        }
+
         public void AxisX_RangeChanged(object sender, EventArgs e)
         {
             Axis x = (Axis)sender;
@@ -133,6 +195,7 @@ namespace ProwarenessDashboard
 
             btnTeam = new Button();
             btnTeam.HorizontalContentAlignment = HorizontalAlignment.Left;
+            btnTeam.MinWidth = 600;
 
             btnTeam.Margin = new Thickness(6, 6, 0, 6);
 
@@ -140,29 +203,16 @@ namespace ProwarenessDashboard
             btnTeam.Background = new SolidColorBrush(Colors.Orange);
             btnTeam.BorderBrush = new SolidColorBrush(Colors.LightGray);
             btnTeam.Click += new RoutedEventHandler(StartButton_Click);
-            LoadRightTopPanel(team);
-            loadVideoPanel(team);
+          
             btnTeam.CommandParameter = team.videoUrl;
             TeamsListStackPanel.Children.Add(btnTeam); 
         }
 
-        public void loadVideoPanel(Team team)
-        {
-            //btnTeam.Click += new RoutedEventHandler(StartButton_Click);
-            
-        }
+       
 
-
-
-        private void LoadRightTopPanel(Team team)
-        {
-
-        }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-
-            //this.btnTeam.Background = new SolidColorBrush(Colors.Red);
             Button senderButton = sender as Button;
             foreach (Button eachButton in TeamsListStackPanel.Children)
             {
@@ -181,7 +231,7 @@ namespace ProwarenessDashboard
             senderButton.BorderBrush = new SolidColorBrush(Colors.Black);
             Button team = (Button) sender;
             string videoUrl =  team.CommandParameter.ToString();
-
+            PositionElement();
             if (currentDisplay != DisplayElement.Frame)
             {
                 currentDisplay = DisplayElement.Frame;
@@ -189,7 +239,7 @@ namespace ProwarenessDashboard
                 PositionElement();
             }
 
-            theDisplay.SetAttribute("src",videoUrl);
+            theDisplay.SetAttribute("src", videoUrl);
         }
 
         void Page_SizeChanged(object sender, SizeChangedEventArgs e)

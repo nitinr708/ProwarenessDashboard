@@ -8,3 +8,8 @@ C:\Documents and Settings\nitin\My Documents\ProwarenessDashboard\ProwarenessDas
 C:\Documents and Settings\nitin\My Documents\ProwarenessDashboard\ProwarenessDashboard.Web\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\nitin\My Documents\ProwarenessDashboard\ProwarenessDashboard.Web\obj\Debug\ProwarenessDashboard.Web.dll
 C:\Documents and Settings\nitin\My Documents\ProwarenessDashboard\ProwarenessDashboard.Web\obj\Debug\ProwarenessDashboard.Web.pdb
+D:\Repositories\ProwarenessDashboard\ProwarenessDashboard.Web\bin\ProwarenessDashboard.Web.dll
+D:\Repositories\ProwarenessDashboard\ProwarenessDashboard.Web\bin\ProwarenessDashboard.Web.pdb
+D:\Repositories\ProwarenessDashboard\ProwarenessDashboard.Web\obj\Debug\ResolveAssemblyReference.cache
+D:\Repositories\ProwarenessDashboard\ProwarenessDashboard.Web\obj\Debug\ProwarenessDashboard.Web.dll
+D:\Repositories\ProwarenessDashboard\ProwarenessDashboard.Web\obj\Debug\ProwarenessDashboard.Web.pdb

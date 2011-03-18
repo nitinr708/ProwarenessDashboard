@@ -1,0 +1,1804 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Windows.Controls.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel">
+            <summary>
+            CompositeFilterViewModel.
+            </summary>
+            <summary>
+            CompositeFilterViewModel.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources;
+            <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel.Filters">
+            <summary>
+            Gets the filters.
+            </summary>
+            <value>The filters.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel.LogicalOperator">
+            <summary>
+            Gets or sets the logical operator.
+            </summary>
+            <value>The logical operator.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel.ItemProperties">
+            <summary>
+            Gets the item properties.
+            </summary>
+            <value>The item properties.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel.FilterViewModelCollection">
+            <summary>
+            FilterViewModelCollection.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel.FilterViewModelCollection.ClearItems">
+            <summary>
+            Clears the items.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel.FilterViewModelCollection.InsertItem(System.Int32,Telerik.Windows.Controls.Data.DataFilter.FilterViewModel)">
+            <summary>
+            Inserts the item.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="viewModel">The view model.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel.FilterViewModelCollection.RemoveItem(System.Int32)">
+            <summary>
+            Removes the item.
+            </summary>
+            <param name="index">The index.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel.FilterViewModelCollection.SetItem(System.Int32,Telerik.Windows.Controls.Data.DataFilter.FilterViewModel)">
+            <summary>
+            Sets the item.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="viewModel">The view model.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel.FilterViewModelCollection.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing,
+            or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel.FilterViewModelCollection.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources;
+            <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel.FilterViewModelCollection.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.CompositeFilterViewModel.FilterViewModelCollection.IgnoreParentFilterDescriptorsEventsHelper">
+            <summary>
+            IgnoreParentFilterDescriptorsEventsHelper.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.DataFilterPresenter">
+            <summary>
+            Contains the default set of UI controls for RadDataFilter.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.DataFilterPresenter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.Data.DataFilter.DataFilterPresenter"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.DataFilterPresenter.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.EditorCreatedEventArgs">
+            <summary>
+            EditorCreatedEventArgs.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.EditorCreatedEventArgs.#ctor(System.Windows.FrameworkElement,Telerik.Windows.Data.ItemPropertyInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.Data.DataFilter.EditorCreatedEventArgs"/> class.
+            </summary>
+            <param name="editor">The editor.</param>
+            <param name="itemPropertyInfo">The item property info.</param>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.EditorCreatedEventArgs.Editor">
+            <summary>
+            Gets the editor.
+            </summary>
+            <value>The editor.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.EditorCreatedEventArgs.ItemPropertyInfo">
+            <summary>
+            Gets the item property info.
+            </summary>
+            <value>The item property info.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.StringFilterEditor">
+            <summary>
+            StringFilterEditor.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.StringFilterEditor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.Data.DataFilter.StringFilterEditor"/> class.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.TextBoxBehavior">
+            <summary>
+            TextBoxBehavior.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.TextBoxBehavior.GetUpdateTextOnEnter(System.Windows.Controls.TextBox)">
+            <summary>
+            Gets the whether text should be updated on enter.
+            </summary>
+            <param name="textBox">The text box.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.TextBoxBehavior.SetUpdateTextOnEnter(System.Windows.Controls.TextBox,System.Boolean)">
+            <summary>
+            Sets whether text should be updated on enter.
+            </summary>
+            <param name="textBox">The text box.</param>
+            <param name="value">if set to <c>true</c> then text should be updated.</param>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataFilter.TextBoxBehavior.UpdateTextOnEnterProperty">
+            <summary>
+            Represents the UpdateTextOnEnter attached property.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.TextBoxBehavior.GetSelectAllOnGotFocus(System.Windows.Controls.TextBox)">
+            <summary>
+            Gets the whether SelectAll should be called when focus is got.
+            </summary>
+            <param name="textBox">The text box.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.TextBoxBehavior.SetSelectAllOnGotFocus(System.Windows.Controls.TextBox,System.Boolean)">
+            <summary>
+            Sets whether SelectAll should be called when focus is got.
+            </summary>
+            <param name="textBox">The text box.</param>
+            <param name="value">if set to <c>true</c> then SelectAll should be called when focus is got.</param>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataFilter.TextBoxBehavior.SelectAllOnGotFocusProperty">
+            <summary>
+            Represents the SelectAllOnGotFocus attached property.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.FilterControl">
+            <summary>
+            FilterControl.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.FilterControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.Data.DataFilter.FilterControl"/> class.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.FilterEditor">
+            <summary>
+            FilterEditor.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataFilter.FilterEditor.ItemPropertyInfoProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Data.DataFilter.FilterEditor.ItemPropertyInfo"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.FilterEditor.ItemPropertyInfo">
+            <summary>
+            Gets or sets the item property info.
+            </summary>
+            <value>The item property info.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.FilterMemberToEnabledConverter">
+            <summary>
+            Converts a FilterDescirptor.Member to a boolean value.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.FilterMemberToEnabledConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a FilterDescirptor.Member to a boolean value.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            If the FilterDescirptor.Member is null or empty return <b>false</b>, otherwise returns <b>true</b>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.FilterMemberToEnabledConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            This method is not implemented.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            Throws a <see cref="T:System.NotImplementedException"/>.
+            </returns>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel">
+            <summary>
+            FilterViewModel.
+            </summary>
+            <summary>
+            FilterViewModel.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources;
+            <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.AddFilter">
+            <summary>
+            Gets the AddFilter command.
+            </summary>
+            <value>The add filter.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.RemoveFilter">
+            <summary>
+            Gets the RemoveFilter command.
+            </summary>
+            <value>The RemoveFilter command.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.ToCompositeFilter">
+            <summary>
+            Gets the ToCompositeFilter command.
+            </summary>
+            <value>The ToCompositeFilter command.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.IsComposite">
+            <summary>
+            Gets a value indicating whether this instance is composite.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is composite; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.CompositeFilter">
+            <summary>
+            Gets the composite filter.
+            </summary>
+            <value>The composite filter.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.SimpleFilter">
+            <summary>
+            Gets the simple filter.
+            </summary>
+            <value>The simple filter.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.Parent">
+            <summary>
+            Gets the parent.
+            </summary>
+            <value>The parent.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.ItemProperties">
+            <summary>
+            Gets the item properties.
+            </summary>
+            <value>The item properties.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.AddFilterCommand">
+            <summary>
+            AddFilter.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.AddFilterCommand.#ctor(Telerik.Windows.Controls.Data.DataFilter.FilterViewModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.AddFilterCommand"/> class.
+            </summary>
+            <param name="viewModel">The view model.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.AddFilterCommand.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current state.
+            </summary>
+            <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
+            <returns>
+            true if this command can be executed; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.AddFilterCommand.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+            <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
+        </member>
+        <member name="E:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.AddFilterCommand.System#Windows#Input#ICommand#CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether or not the command should execute.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.RemoveFilterCommand">
+            <summary>
+            RemoveFilter.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.RemoveFilterCommand.#ctor(Telerik.Windows.Controls.Data.DataFilter.FilterViewModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.RemoveFilterCommand"/> class.
+            </summary>
+            <param name="viewModel">The view model.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.RemoveFilterCommand.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current state.
+            </summary>
+            <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
+            <returns>
+            true if this command can be executed; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.RemoveFilterCommand.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+            <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
+        </member>
+        <member name="E:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.RemoveFilterCommand.System#Windows#Input#ICommand#CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether or not the command should execute.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.ToCompositeFilterCommand">
+            <summary>
+            ToCompositeFilter.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.ToCompositeFilterCommand.#ctor(Telerik.Windows.Controls.Data.DataFilter.FilterViewModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.ToCompositeFilterCommand"/> class.
+            </summary>
+            <param name="viewModel">The view model.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.ToCompositeFilterCommand.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current state.
+            </summary>
+            <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
+            <returns>
+            true if this command can be executed; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.ToCompositeFilterCommand.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+            <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
+        </member>
+        <member name="E:Telerik.Windows.Controls.Data.DataFilter.FilterViewModel.ToCompositeFilterCommand.System#Windows#Input#ICommand#CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether or not the command should execute.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.ItemPropertyInfoViewModel">
+            <summary>
+            ItemPropertyInfoViewModel.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.ItemPropertyInfoViewModel.#ctor(Telerik.Windows.Data.ItemPropertyInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.Data.DataFilter.ItemPropertyInfoViewModel"/> class.
+            </summary>
+            <param name="itemPropertyInfo">The item property info.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.ItemPropertyInfoViewModel.Equals(Telerik.Windows.Controls.Data.DataFilter.ItemPropertyInfoViewModel)">
+            <summary>
+            Determines whether the specified <paramref name="other"/> view model 
+            is equal to the current one.
+            </summary>
+            <param name="other">The other view model.</param>
+            <returns>
+            True if the ItemPropertyInfo of the current view model is 
+            equal to the ItemPropertyInfo of the <paramref name="other"/>, otherwise false.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.ItemPropertyInfoViewModel.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object"/> to compare with this instance.</param>
+            <returns>
+            	<c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.ItemPropertyInfoViewModel.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.ItemPropertyInfoViewModel.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.ItemPropertyInfoViewModel.ItemPropertyInfo">
+            <summary>
+            Gets the ItemPropertyInfo.
+            </summary>
+            <value>The ItemPropertyInfo.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.ItemPropertyInfoViewModel.DisplayName">
+            <summary>
+            Gets the display name.
+            </summary>
+            <value>The display name.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.ItemPropertyInfoViewModel.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.ItemPropertyInfoViewModel.PropertyType">
+            <summary>
+            Gets the type of the property.
+            </summary>
+            <value>The type of the property.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.LogicalOperatorToCheckedConverter">
+            <summary>
+            LogicalOperatorToCheckedConverter.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.LogicalOperatorToCheckedConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a FilterCompositionLogicalOperator to a boolean value.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            <b>true</b> if the value is FilterCompositionLogicalOperator.And, otherwise <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.LogicalOperatorToCheckedConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a boolean value to a FilterCompositionLogicalOperator.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            FilterCompositionLogicalOperator.And if the value is true, otherwise FilterCompositionLogicalOperator.Or.
+            </returns>
+        </member>
+        <member name="T:Telerik.Windows.Controls.RadDataFilter">
+            <summary>
+            Provides a user interface for creating filtering expressions.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataFilter.CanUserCreateCompositeFiltersProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataFilter.CanUserCreateCompositeFilters"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataFilter.SourceProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataFilter.Source"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataFilter.FilteredSourcePropertyKey">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataFilter.FilteredSource"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataFilter.FilteredSourceProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataFilter.FilteredSource"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataFilter.ItemPropertiesProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataFilter.ItemProperties"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataFilter.FilterDescriptorsPropertyKey">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataFilter.FilterDescriptors"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataFilter.FilterDescriptorsProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataFilter.FilterDescriptors"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataFilter.ViewModelPropertyKey">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataFilter.ViewModel"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataFilter.ViewModelProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataFilter.ViewModel"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataFilter.EditorTemplateSelectorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataFilter.EditorTemplateSelector"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataFilter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.RadDataFilter"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataFilter.ResetTheme">
+            <summary>
+            Resets the theme.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataFilter.OnEditorCreated(Telerik.Windows.Controls.Data.DataFilter.EditorCreatedEventArgs)">
+            <summary>
+            Raises the EditorCreated event.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataFilter.UpdateViewModel">
+            <summary>
+            If the ItemProperties are ready -- go for it and create the ViewModel.
+            If they are null, like often is the case with a DIC, the ViewModel
+            will be created later when a PropertyChanged arrives that the ItemProperties
+            have become available.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataFilter.OnItemPropertiesPropertyChanged(System.Collections.Generic.IEnumerable{Telerik.Windows.Data.ItemPropertyInfo})">
+            <summary>
+            This method will be called only as a result of a DependencyProperty change callback
+            of the ItemProperties property.
+            The setter of the QueryableSource property should set the ItemProperties of the 
+            new QueryableSource without invoking the callback because the logic below is for 
+            unbound mode only.
+            In other words, this method will be called when a user assigns ItemProperties when
+            RadDataFilter is in unbound mode.
+            </summary>
+            <param name="newItemProperties">The item properties.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataFilter.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadDataFilter.EditorCreated">
+            <summary>
+            Occurs when a filter editor has been created and before it is added to the visual tree.
+            Use this event if you want to customize the editor.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataFilter.CanUserCreateCompositeFilters">
+            <summary>
+            Gets or sets a value indicating whether the user can create composite filters.
+            This property is typically used when filtering a DomainDataSource, which does not
+            support filter composition.
+            </summary>
+            <value><c>true</c> if filter composition is disabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataFilter.Source">
+            <summary>
+            Gets or sets the data collection that the <see cref="T:Telerik.Windows.Controls.RadDataFilter"/> filters.
+            </summary>
+            <value>The data collection associated with this filter control.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataFilter.FilteredSource">
+            <summary>
+            Gets the filtered source.
+            </summary>
+            <remarks>
+            Binding the ItemsSource property of an ItemsControl to the FilteredSource 
+            property will enable filtering for this control through RadDataFilter.
+            </remarks>
+            <value>The filtered source.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataFilter.ItemProperties">
+            <summary>
+            Gets or sets the item properties used for creating filter conditions.
+            </summary>
+            <remarks>
+            This property can be used only when <see cref="T:Telerik.Windows.Controls.RadDataFilter"/> is in unbound mode,
+            i.e. when the <see cref="P:Telerik.Windows.Controls.RadDataFilter.Source"/> property is null. Assigning this property
+            while in bound mode will result in a <see cref="T:System.InvalidOperationException"/>.
+            </remarks>
+            <value>The item properties.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataFilter.FilterDescriptors">
+            <summary>
+            Gets the filter descriptors. Use this collection to add or remove filter 
+            conditions to RadDataFilter.
+            </summary>
+            <value>The filter descriptors.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataFilter.ViewModel">
+            <summary>
+            Gets or sets the view model.
+            </summary>
+            <value>The view model.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataFilter.EditorTemplateSelector">
+            <summary>
+            Gets or sets the data template selector for the filter editors.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.RadDataFilter.UnboundQueryableCollectionView">
+            <summary>
+            Default implementation used for unbound mode.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.RootFilterViewModel">
+            <summary>
+            RootFilterViewModel.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.RootFilterViewModel.IsComposite">
+            <summary>
+            Gets a value indicating whether this instance is composite.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is composite; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataFilter.SimpleFilterViewModel">
+            <summary>
+            SimpleFilterViewModel.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.SimpleFilterViewModel.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataFilter.SimpleFilterViewModel.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources;
+            <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.SimpleFilterViewModel.SelectedMember">
+            <summary>
+            Gets or sets the selected member.
+            </summary>
+            <value>The selected member.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.SimpleFilterViewModel.Member">
+            <summary>
+            Gets or sets the member.
+            </summary>
+            <value>The member.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.SimpleFilterViewModel.AvailableMembers">
+            <summary>
+            Gets the available members.
+            </summary>
+            <value>The available members.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.SimpleFilterViewModel.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+            <value>The operator.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.SimpleFilterViewModel.AvailableOperators">
+            <summary>
+            Gets the available operators.
+            </summary>
+            <value>The available operators.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.SimpleFilterViewModel.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.SimpleFilterViewModel.IsCaseSensitive">
+            <summary>
+            Gets or sets a value indicating whether this instance is case sensitive.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is case sensitive; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataFilter.SimpleFilterViewModel.MemberType">
+            <summary>
+            Gets or sets the type of the member.
+            </summary>
+            <value>The type of the member.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.TypeExtensions">
+            <summary>
+            TypeExtensions.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.TypeExtensions.ToItemProperties(System.Type)">
+            <summary>
+            Converts the type to a collection of item properties.
+            </summary>
+            <param name="source">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Windows.Controls.AutoEllipsisModes">
+            <summary>
+            Specifies how the ellipsis are displayed on a RadDataPager control.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.AutoEllipsisModes.None">
+            <summary>
+            No ellispis are shown.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.AutoEllipsisModes.Before">
+            <summary>
+            Ellipsis are shown before the numeric buttons.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.AutoEllipsisModes.After">
+            <summary>
+            Ellipsis are shown after the numeric buttons.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.AutoEllipsisModes.Both">
+            <summary>
+            Ellipsis are shown both before and after the numeric buttons.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter">
+            <summary>
+            Contains the default set of UI controls for RadDataPager.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter"/> class.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.AutoEllipsisModeProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.AutoEllipsisMode"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.DisplayModeProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.DisplayMode"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.NumericButtonCountProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.NumericButtonCount"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.NumericButtonStyleProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.NumericButtonStyle"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.PageIndexProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.PageIndex"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.PageCountProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.PageCount"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.ResetTheme">
+            <summary>
+            Resets the theme.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.AutoEllipsisMode">
+            <summary>
+            Gets or sets a value indicating whether ellipsis will be shown.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.PagerControlsVisibility">
+            <summary>
+            Gets the pager controls visibility.
+            </summary>
+            <value>The pager controls visibility.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.DisplayMode">
+            <summary>
+            Gets or sets the pager display mode.
+            </summary>
+            <value>The pager display mode.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.NumericButtonCount">
+            <summary>
+            Gets or sets the numeric button count.
+            </summary>
+            <value>The numeric button count.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.NumericButtonStyle">
+            <summary>
+            Gets or sets the numeric and ellipsis buttons style.
+            </summary>
+            <value>The numeric button style.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.PageIndex">
+            <summary>
+            Gets or sets the index of the page.
+            </summary>
+            <value>The index of the page.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerPresenter.PageCount">
+            <summary>
+            Gets or sets the page count.
+            </summary>
+            <value>The page count.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataPager.DataPagerTextBox">
+            <summary>
+            Parses text entry to raise a GoToPage command.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.DataPagerTextBox.PageIndexProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Data.DataPager.DataPagerTextBox.PageIndex"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.DataPagerTextBox.CommandParameterProperty">
+            <summary>
+            Identifies the CommandParameter property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.DataPagerTextBox.CommandProperty">
+            <summary>
+            Identifies the Command property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.DataPagerTextBox.CommandTargetProperty">
+            <summary>
+            Identifies the CommandTarget property.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.DataPagerTextBox.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Called when <see cref="E:System.Windows.UIElement.KeyDown"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.DataPagerTextBox.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before <see cref="E:System.Windows.UIElement.LostFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.DataPagerTextBox.ResetTheme">
+            <summary>
+            Resets the theme.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerTextBox.PageIndex">
+            <summary>
+            Gets or sets the index of the page.
+            </summary>
+            <value>The index of the page.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerTextBox.Command">
+            <summary>
+            Gets the command that will be executed when the command source is invoked.
+            This is a dependency property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerTextBox.CommandParameter">
+            <summary>
+            Represents a user defined data value that can be passed to the command when it is executed.
+            This is a dependency property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerTextBox.CommandTarget">
+            <summary>
+            The object that the command is being executed on.
+            This is a dependency property.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel">
+            <summary>
+            Represents the view model of the <see cref="T:Telerik.Windows.Controls.RadDataPager"/> control.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.MoveToFirstPage">
+            <summary>
+            Sets the first page as the current page.
+            </summary>
+            <returns>
+            	<c>true</c> if this operation was successful; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.MoveToLastPage">
+            <summary>
+            Sets the last page as the current page.
+            </summary>
+            <returns>
+            	<c>true</c> if this operation was successful; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.MoveToNextPage">
+            <summary>
+            Moves to the page after the current page.
+            </summary>
+            <returns>
+            	<c>true</c> if this operation was successful; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.MoveToPage(System.Int32)">
+            <summary>
+            Moves to the page at the specified index.
+            </summary>
+            <param name="pageIndex">The index of the page to move to.</param>
+            <returns>
+            	<c>true</c> if this operation was successful; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.MoveToPreviousPage">
+            <summary>
+            Moves to the page before the current page.
+            </summary>
+            <returns>
+            	<c>true</c> if this operation was successful; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.Telerik#Windows#Data#IWeakEventListener{System#ComponentModel#PropertyChangedEventArgs}#ReceiveWeakEvent(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Receives the PropertyChanged weak event from the PagedSource and rethrows it.
+            The DataPager control is listening for this in order to update itself.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="args">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.OnPropertyChanged(System.String)">
+            <summary>
+            Raises this object's <see cref="E:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.PropertyChanged"/> event.
+            </summary>
+            <param name="propertyName">The property that has a new value.</param>
+        </member>
+        <member name="E:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.PropertyChanged">
+            <summary>
+            Raised when a property on this object has a new value.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.ItemCount">
+            <summary>
+            Gets the current number of known items in the 
+            <see cref="T:System.ComponentModel.IPagedCollectionView" />. 
+            </summary>
+            <value>The item count.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.PageSize">
+            <summary>
+            Gets or sets the page size.
+            </summary>
+            <value>The page size.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.PageCount">
+            <summary>
+            Gets the current number of known pages in the 
+            <see cref="T:System.ComponentModel.IPagedCollectionView" /> . 
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.PageIndex">
+            <summary>
+            Gets or sets the current <see cref="P:System.ComponentModel.IPagedCollectionView.PageIndex" /> 
+            in the <see cref="T:System.ComponentModel.IPagedCollectionView" /> . 
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.NeedsPaging">
+            <summary>
+            Gets a value indicating whether paging is needed.
+            </summary>
+            <value><c>true</c> if paging is needed; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.IsTotalItemCountFixed">
+            <summary>
+            Gets or sets a value that indicates whether or not the total
+            number of items in the collection is fixed.
+            </summary>
+            <value>
+            	<c>true</c> if the total item count fixed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.CanMoveToFirstPage">
+            <summary>
+            Gets a value that indicates whether the user can move to the first page.
+            </summary>
+            <value>
+            	<c>true</c> if the user can move to the first page; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.CanMoveToLastPage">
+            <summary>
+            Gets a value that indicates whether the user can move to the last page.
+            </summary>
+            <value>
+            	<c>true</c> if the user can move to the last page; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.CanMoveToNextPage">
+            <summary>
+            Gets a value that indicates whether the user can move to the next page.
+            </summary>
+            <value>
+            	<c>true</c> if the user can move to the next page; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.CanChangePage">
+            <summary>
+            Gets a value that indicates whether the user can move to another page.
+            </summary>
+            <value>
+            	<c>true</c> if the user can move to another page; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.CanMoveToPreviousPage">
+            <summary>
+            Gets a value that indicates whether the user can move to the previous page.
+            </summary>
+            <value>
+            	<c>true</c> if the user can move to the previous page; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.DataPagerViewModel.PagedSource">
+            <summary>
+            Gets the paged source.
+            </summary>
+            <value>The paged source.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter">
+            <summary>
+            Presents a list of available pages as numeric and ellipsis buttons.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter"/> class.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.AutoEllipsisModeProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.AutoEllipsisMode"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.NumericButtonStyleProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.NumericButtonStyle"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.NumericButtonCountProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.NumericButtonCount"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.PageIndexProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.PageIndex"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.PageCountProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.PageCount"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.ResetTheme">
+            <summary>
+            Resets the theme.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.AutoEllipsisMode">
+            <summary>
+            Gets or sets a value indicating whether ellipsis will be shown.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.NumericButtonStyle">
+            <summary>
+            Gets or sets the numeric and ellipsis buttons style.
+            </summary>
+            <value>The numeric button style.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.NumericButtonCount">
+            <summary>
+            Gets or sets the numeric button count.
+            </summary>
+            <value>The numeric button count.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.PageIndex">
+            <summary>
+            Gets or sets the index of the page.
+            </summary>
+            <value>The index of the page.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.PageCount">
+            <summary>
+            Gets or sets the page count.
+            </summary>
+            <value>The page count.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.NumericElementsPresenter.PagesViewModel">
+            <summary>
+            Gets the pages view model.
+            </summary>
+            <value>The pages view model.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.PageIndexChangedEventArgs">
+            <summary>
+            Provides data for a page index changed event.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.PageIndexChangedEventArgs.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.PageIndexChangedEventArgs"/> class.
+            </summary>
+            <param name="oldPageIndex">The old page index.</param>
+            <param name="newPageIndex">The new page index.</param>
+        </member>
+        <member name="P:Telerik.Windows.Controls.PageIndexChangedEventArgs.OldPageIndex">
+            <summary>
+            Gets the old page index.
+            </summary>
+            <value>The old page index.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.PageIndexChangedEventArgs.NewPageIndex">
+            <summary>
+            Gets the new page index.
+            </summary>
+            <value>The new page index.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.PageIndexChangingEventArgs">
+            <summary>
+            Provides data for a page index changing event.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.PageIndexChangingEventArgs.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.PageIndexChangingEventArgs"/> class.
+            </summary>
+            <param name="oldPageIndex">The old page index.</param>
+            <param name="newPageIndex">The new page index.</param>
+        </member>
+        <member name="P:Telerik.Windows.Controls.PageIndexChangingEventArgs.OldPageIndex">
+            <summary>
+            Gets the old page index.
+            </summary>
+            <value>The old page index.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.PageIndexChangingEventArgs.NewPageIndex">
+            <summary>
+            Gets the new page index.
+            </summary>
+            <value>The new page index.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataPager.PagerControlsVisibilityModel">
+            <summary>
+            Provides UI properties to control the visibility of pager inner controls.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.PagerControlsVisibilityModel.DisplayMode">
+            <summary>
+            Gets or sets the pager display mode.
+            </summary>
+            <value>The pager display mode.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.PagerControlsVisibilityModel.MoveToFirstPageControlVisibility">
+            <summary>
+            Gets or sets the move to first page control visibility.
+            </summary>
+            <value>The move to first page control visibility.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.PagerControlsVisibilityModel.NumericElementsControlVisibility">
+            <summary>
+            Gets or sets the numeric elements control visibility.
+            </summary>
+            <value>The numeric elements control visibility.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.PagerControlsVisibilityModel.MoveToPreviousPageControlVisibility">
+            <summary>
+            Gets or sets the move to previous page control visibility.
+            </summary>
+            <value>The move to previous page control visibility.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.PagerControlsVisibilityModel.MoveToNextPageControlVisibility">
+            <summary>
+            Gets or sets the move to next control visibility.
+            </summary>
+            <value>The move to next control visibility.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.PagerControlsVisibilityModel.MoveToLastPageControlVisibility">
+            <summary>
+            Gets or sets the move to last page control visibility.
+            </summary>
+            <value>The move to last page control visibility.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.PagerControlsVisibilityModel.TextControlVisibility">
+            <summary>
+            Gets or sets the move to last page control visibility.
+            </summary>
+            <value>The move to last page control visibility.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.PagerDisplayModes">
+            <summary>
+            Specifies how the page controls are displayed on a RadDataPager control.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.PagerDisplayModes.First">
+            <summary>
+            Shows the First button.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.PagerDisplayModes.Last">
+            <summary>
+            Shows the Last button.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.PagerDisplayModes.Previous">
+            <summary>
+            Shows the Previous button.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.PagerDisplayModes.Next">
+            <summary>
+            Shows the Next button.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.PagerDisplayModes.Numeric">
+            <summary>
+            Shows the numeric buttons.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.PagerDisplayModes.Text">
+            <summary>
+            Shows the page index text box.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.PagerDisplayModes.FirstLastNumeric">
+            <summary>
+            Shows the First, Last and numeric buttons.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.PagerDisplayModes.FirstLastPreviousNext">
+            <summary>
+            Shows the First, Last, Previous, and Next buttons.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.PagerDisplayModes.FirstLastPreviousNextNumeric">
+            <summary>
+            Shows the First, Last, Previous, Next, and numeric buttons.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.PagerDisplayModes.PreviousNext">
+            <summary>
+            Shows the Previous and Next buttons.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.PagerDisplayModes.PreviousNextNumeric">
+            <summary>
+            Shows the Previous, Next, and numeric buttons.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.PagerDisplayModes.All">
+            <summary>
+            Shows all available buttons.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataPager.PagesViewModel">
+            <summary>
+            Represents the pages to be displayed.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.PagesViewModel.#ctor(System.Int32,System.Int32,System.Int32,Telerik.Windows.Controls.AutoEllipsisModes,System.Windows.Style)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.Data.DataPager.PagesViewModel"/> class.
+            </summary>
+            <param name="numericButtonCount">The numeric button count.</param>
+            <param name="pageIndex">Index of the page.</param>
+            <param name="pageCount">The page count.</param>
+            <param name="autoEllipsisMode">The auto ellipsis mode.</param>
+            <param name="numericButtonStyle">The numeric button style.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.PagesViewModel.#ctor(System.Int32,System.Int32,System.Int32,Telerik.Windows.Controls.AutoEllipsisModes)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.Data.DataPager.PagesViewModel"/> class.
+            </summary>
+            <param name="numericButtonCount">The numeric button count.</param>
+            <param name="pageIndex">Index of the page.</param>
+            <param name="pageCount">The page count.</param>
+            <param name="autoEllipsisMode">The auto ellipsis mode.</param>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.PagesViewModel.Pages">
+            <summary>
+            Gets the pages to be displayed.
+            </summary>
+            <value>The pages.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Data.DataPager.PageViewModel">
+            <summary>
+            Provides UI properties to be used when displaying a page in the numeric section of the pager.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Data.DataPager.PageViewModel.#ctor(System.Object,System.Int32,System.Boolean,System.String,System.Windows.Style)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.Data.DataPager.PageViewModel"/> class.
+            </summary>
+            <param name="content">The content.</param>
+            <param name="pageIndex">Index of the page.</param>
+            <param name="isCurrent">If set to <c>true</c> [is current].</param>
+            <param name="groupName">Name of the group.</param>
+            <param name="numericButtonStyle">The numeric button style.</param>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.PageViewModel.Content">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>The content.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.PageViewModel.PageIndex">
+            <summary>
+            Gets or sets the index of the page.
+            </summary>
+            <value>The index of the page.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.PageViewModel.IsCurrent">
+            <summary>
+            Gets or sets a value indicating whether this instance is current.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is current; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.PageViewModel.GroupName">
+            <summary>
+            Gets or sets the name of the group used as a radiobutton group for the pages.
+            </summary>
+            <value>The name of the group.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Data.DataPager.PageViewModel.NumericButtonStyle">
+            <summary>
+            Gets or sets the numeric button style.
+            </summary>
+            <value>The numeric button style.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.RadDataPager">
+            <summary>
+            Provides a user interface for paging through a collection of data.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.SourceProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.Source"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.PagedSourcePropertyKey">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.PagedSource"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.PagedSourceProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.PagedSource"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.PageIndexProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.PageIndex"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.PageSizeProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.PageSize"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.ItemCountPropertyKey">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.ItemCount"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.ItemCountProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.ItemCount"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.PageCountPropertyKey">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.PageCount"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.PageCountProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.PageCount"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.CanMoveToFirstPagePropertyKey">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanMoveToFirstPage"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.CanMoveToFirstPageProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanMoveToFirstPage"/> dependency property.
+            </summary>
+            <value>The identifier for the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanMoveToFirstPage"/> dependency property.</value>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.CanMoveToLastPagePropertyKey">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanMoveToLastPage"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.CanMoveToLastPageProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanMoveToLastPage"/> dependency property.
+            </summary>
+            <value>The identifier for the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanMoveToLastPage"/> dependency property.</value>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.CanMoveToNextPagePropertyKey">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanMoveToNextPage"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.CanMoveToNextPageProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanMoveToNextPage"/> dependency property.
+            </summary>
+            <value>The identifier for the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanMoveToNextPage"/> dependency property.</value>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.CanChangePagePropertyKey">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanChangePage"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.CanChangePageProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanChangePage"/> dependency property.
+            </summary>
+            <value>The identifier for the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanChangePage"/> dependency property.</value>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.CanMoveToPreviousPagePropertyKey">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanMoveToPreviousPage"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.CanMoveToPreviousPageProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanMoveToPreviousPage"/> dependency property.
+            </summary>
+            <value>The identifier for the <see cref="P:Telerik.Windows.Controls.RadDataPager.CanMoveToPreviousPage"/> dependency property.</value>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.IsTotalItemCountFixedProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.IsTotalItemCountFixed"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.NumericButtonCountProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.NumericButtonCount"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.DisplayModeProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.DisplayMode"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.AutoEllipsisModeProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.AutoEllipsisMode"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPager.NumericButtonStyleProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDataPager.NumericButtonStyle"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataPager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.RadDataPager"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataPager.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever 
+            application code or internal processes call 
+            <see cref="M:System.Windows.FrameworkElement.ApplyTemplate"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataPager.MoveToFirstPage">
+            <summary>
+            Sets the first page as the current page.
+            </summary>
+            <returns>
+            	<c>true</c> if this operation was successful; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataPager.MoveToLastPage">
+            <summary>
+            Sets the last page as the current page.
+            </summary>
+            <returns>
+            	<c>true</c> if this operation was successful; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataPager.MoveToNextPage">
+            <summary>
+            Moves to the page after the current page.
+            </summary>
+            <returns>
+            	<c>true</c> if this operation was successful; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataPager.MoveToPage(System.Int32)">
+            <summary>
+            Moves to the page at the specified index.
+            </summary>
+            <param name="pageIndex">The index of the page to move to.</param>
+            <returns>
+            	<c>true</c> if this operation was successful; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataPager.MoveToPreviousPage">
+            <summary>
+            Moves to the page before the current page.
+            </summary>
+            <returns>
+            	<c>true</c> if this operation was successful; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataPager.OnPageIndexChanging(Telerik.Windows.Controls.PageIndexChangingEventArgs)">
+            <summary>
+            Raises the <see cref="E:PageIndexChanging"/> event.
+            </summary>
+            <param name="args">The <see cref="T:Telerik.Windows.Controls.PageIndexChangingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataPager.OnPageIndexChanged(Telerik.Windows.Controls.PageIndexChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:PageIndexChanged"/> event.
+            </summary>
+            <param name="args">The <see cref="T:Telerik.Windows.Controls.PageIndexChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadDataPager.ResetTheme">
+            <summary>
+            Resets the theme.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadDataPager.PageIndexChanging">
+            <summary>
+            Occurs when the page index is about to change.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadDataPager.PageIndexChanged">
+            <summary>
+            Occurs when the page index has changed.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.Source">
+            <summary>
+            Gets or sets the data collection that the <see cref="T:Telerik.Windows.Controls.RadDataPager"/> controls paging for.
+            </summary>
+            <value>The data collection associated with this pager control.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.PagedSource">
+            <summary>
+            Gets the paged source.
+            </summary>
+            <remarks>
+            Binding the ItemsSource property of an ItemsControl to the PagedSource 
+            property will enable paging for this control through RadDataPager.
+            </remarks>
+            <value>The paged source.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.PageIndex">
+            <summary>
+            Gets or sets the current <see cref="P:System.ComponentModel.IPagedCollectionView.PageIndex"/>
+            in the <see cref="T:System.ComponentModel.IPagedCollectionView"/> .
+            </summary>
+            <value>The index of the page.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.PageSize">
+            <summary>
+            Gets or sets the current <see cref="P:System.ComponentModel.IPagedCollectionView.PageSize"/>
+            in the <see cref="T:System.ComponentModel.IPagedCollectionView"/> .
+            </summary>
+            <value>The page size.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.ItemCount">
+            <summary>
+            Gets the current number of known items in the 
+            <see cref="T:System.ComponentModel.IPagedCollectionView" />. 
+            </summary>
+            <value>The item count.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.PageCount">
+            <summary>
+            Gets the current number of pages in the 
+            <see cref="T:System.ComponentModel.IPagedCollectionView" />. 
+            </summary>
+            <value>The page count.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.CanMoveToFirstPage">
+            <summary>
+            Gets a value that indicates whether the user can move to the first page.
+            </summary>
+            <value>
+            	<c>true</c> if this user can move to the first page; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.CanMoveToLastPage">
+            <summary>
+            Gets a value that indicates whether the user can move to the last page.
+            </summary>
+            <value>
+            	<c>true</c> if this user can move to the last page; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.CanMoveToNextPage">
+            <summary>
+            Gets a value that indicates whether the user can move to the next page.
+            </summary>
+            <value>
+            	<c>true</c> if this user can move to the next page; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.CanChangePage">
+            <summary>
+            Gets a value that indicates whether the user can move to another page.
+            </summary>
+            <value>
+            	<c>true</c> if this user can move to another page; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.CanMoveToPreviousPage">
+            <summary>
+            Gets a value that indicates whether the user can move to the previous page.
+            </summary>
+            <value>
+            	<c>true</c> if this user can move to the previous page; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.IsTotalItemCountFixed">
+            <summary>
+            Gets or sets a value that indicates whether or not the total
+            number of items in the collection is fixed.
+            </summary>
+            <value>
+            	<c>true</c> if the total item count fixed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.NumericButtonCount">
+            <summary>
+            Gets or sets the numeric button count.
+            </summary>
+            <value>The numeric button count.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.DisplayMode">
+            <summary>
+            Gets or sets the pager display mode.
+            </summary>
+            <value>The pager display mode.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.AutoEllipsisMode">
+            <summary>
+            Gets or sets a value indicating whether ellipsis will be shown.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPager.NumericButtonStyle">
+            <summary>
+            Gets or sets the numeric and ellipsis buttons style.
+            </summary>
+            <value>The numeric button style.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.RadDataPagerCommands">
+            <summary>
+            All commands that <see cref="T:Telerik.Windows.Controls.RadDataPager"/> exposes.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPagerCommands.MoveToFirstPage">
+            <summary>
+            Gets the move to first page command.
+            </summary>
+            <value>The move to first page command.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPagerCommands.MoveToLastPage">
+            <summary>
+            Gets the move to last page command.
+            </summary>
+            <value>The move to last page command.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPagerCommands.MoveToNextPage">
+            <summary>
+            Gets the move to next page command.
+            </summary>
+            <value>The move to next page command.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPagerCommands.MoveToPage">
+            <summary>
+            Gets the move to page command.
+            </summary>
+            <value>The move to page command.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDataPagerCommands.MoveToPreviousPage">
+            <summary>
+            Gets the move to previous page command.
+            </summary>
+            <value>The move to previous page command.</value>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPagerCommands.CommandId.MoveToFirstPage">
+            <summary>
+            Move to first page command.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPagerCommands.CommandId.MoveToLastPage">
+            <summary>
+            Move to last page command.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPagerCommands.CommandId.MoveToNextPage">
+            <summary>
+            Move to next page command.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPagerCommands.CommandId.MoveToPage">
+            <summary>
+            Move to page command.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadDataPagerCommands.CommandId.MoveToPreviousPage">
+            <summary>
+            Move to previous page command.
+            </summary>
+        </member>
+    </members>
+</doc>
