@@ -152,14 +152,14 @@ namespace ProwarenessDashboard
         public void addTeamTab(Team team)
         {
 
-            Label Label = new Label() { Content = "Team -", Margin = new Thickness(5,0,0,0) };
-            Label lblVelocity = new Label() { Content = "Velocity:", Margin = new Thickness(5, 0, 0, 0) };
-            Label lblQuality = new Label() { Content = "Quality:", Margin = new Thickness(5, 0, 0, 0) };
-            Label lblReliability = new Label() { Content = "Reliability:", Margin = new Thickness(5, 0, 0, 0) };
-            Label lblTeamName = new Label() { Content = team.name.ToString(), Margin = new Thickness(5, 0, 0, 0) };
-            Label lblTeamVelocity = new Label() { Content = team.velocity.ToString(), Margin = new Thickness(5, 0, 0, 0) };
-            Label lblTeamQuality = new Label() { Content = team.quality.ToString(), Margin = new Thickness(5, 0, 0, 0) };
-            Label lblTeamReliability = new Label() { Content = team.reliability.ToString(), Margin = new Thickness(5, 0, 0, 0) };
+            TextBlock Label = new TextBlock() { Text = "Team -", Margin = new Thickness(5, 0, 0, 0) };
+            TextBlock lblVelocity = new TextBlock() { Text = "Velocity:", Margin = new Thickness(5, 0, 0, 0) };
+            TextBlock lblQuality = new TextBlock() { Text = "Quality:", Margin = new Thickness(5, 0, 0, 0) };
+            TextBlock lblReliability = new TextBlock() { Text = "Reliability:", Margin = new Thickness(5, 0, 0, 0) };
+            TextBlock lblTeamName = new TextBlock() { Text = team.name, Margin = new Thickness(5, 0, 0, 0), TextWrapping = TextWrapping.Wrap }; //TextTrimming=TextTrimming.WordEllipsis };
+            TextBlock lblTeamVelocity = new TextBlock() { Text = team.velocity.ToString(), Margin = new Thickness(5, 0, 0, 0) };
+            TextBlock lblTeamQuality = new TextBlock() { Text = team.quality.ToString(), Margin = new Thickness(5, 0, 0, 0) };
+            TextBlock lblTeamReliability = new TextBlock() { Text = team.reliability.ToString(), Margin = new Thickness(5, 0, 0, 0) };
 
 
             Grid grid = new Grid();
@@ -192,12 +192,20 @@ namespace ProwarenessDashboard
             grid.Children.Add(lblTeamQuality);
             grid.Children.Add(lblTeamReliability);
 
-
-            btnTeam = new Button();
+            Rectangle teamRectangle = new Rectangle();
+            teamRectangle.RadiusX = 6;
+            teamRectangle.RadiusY = 6;
+            //teamRectangle.Width = 390;
+            //teamRectangle.Margin = new Thickness(6, 6, 6, 6);
+            
+            teamRectangle.HorizontalAlignment = HorizontalAlignment.Left;
+            Button btnTeam = new Button();
+            
+            teamRectangle.DataContext = btnTeam;
             btnTeam.HorizontalContentAlignment = HorizontalAlignment.Left;
-            btnTeam.MinWidth = 600;
-
-            btnTeam.Margin = new Thickness(6, 6, 0, 6);
+            btnTeam.Margin = new Thickness(8,8,4,4);
+            btnTeam.Height = 180;
+                
 
             btnTeam.Content = grid;
             btnTeam.Background = new SolidColorBrush(Colors.Orange);
@@ -205,7 +213,7 @@ namespace ProwarenessDashboard
             btnTeam.Click += new RoutedEventHandler(StartButton_Click);
           
             btnTeam.CommandParameter = team.videoUrl;
-            TeamsListStackPanel.Children.Add(btnTeam); 
+            TeamsListStackPanel.Children.Add(btnTeam);
         }
 
        
@@ -225,7 +233,7 @@ namespace ProwarenessDashboard
                 }
             }
 
-            senderButton.BorderThickness = new Thickness(5);
+            senderButton.BorderThickness = new Thickness(2);
             senderButton.Background = new SolidColorBrush(Colors.White);
             senderButton.FontWeight = FontWeights.ExtraBold;
             senderButton.BorderBrush = new SolidColorBrush(Colors.Black);

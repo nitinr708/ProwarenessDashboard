@@ -7,11 +7,10 @@
     xmlns:telerikQuickStart="clr-namespace:Telerik.Windows.Controls.QuickStart;assembly=Telerik.Windows.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Height="900" Width="1700" 
-    d:DesignHeight="800" d:DesignWidth="1600" Loaded="UserControl_Loaded"
+    mc:Ignorable="d" BorderBrush="DarkBlue" BorderThickness="2"
+    Loaded="UserControl_Loaded"
      xmlns:telerikChart="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Charting"
-     xmlns:telerikCharting="clr-namespace:Telerik.Windows.Controls.Charting;assembly=Telerik.Windows.Controls.Charting">
+     xmlns:telerikCharting="clr-namespace:Telerik.Windows.Controls.Charting;assembly=Telerik.Windows.Controls.Charting" FontFamily="Lucida Sans Unicode" FontStretch="Expanded"  OpacityMask="#ED000000">
 
 
     <UserControl.Resources>
@@ -68,10 +67,10 @@
 
 
 
-    <Grid Background="#FFBA6435" Height="Auto" Width="1670">
+    <Grid Background="#FFFF6C10" Margin="30" IsHitTestVisible="True" AllowDrop="False">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="259*" />
-                <ColumnDefinition Width="1441*" />
+                <ColumnDefinition Width="350" />
+                <ColumnDefinition Width="2800*" />
                 <!--<ColumnDefinition Width="110*" />-->
         </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -80,13 +79,13 @@
                 <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <!-- StackPanel to hold the Webcam Control Buttons -->
-        <StackPanel Name="labelStackPanel" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="1" Margin="491,0,331,0" Width="573">
-            <sdk:Label Name="Heading" Content="Prowareness Dashboard" FontSize="40" FontStyle="Normal" Background="#00A35C5C" Width="596" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontWeight="Bold">
+        <StackPanel Name="labelStackPanel" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="1" Margin="452,0,322,0" Width="573">
+            <sdk:Label Name="Heading" Content="Prowareness Dashboard" FontSize="40" FontStyle="Normal" Background="#00FFFCFC" Width="576" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF0B1655" FontWeight="Bold" BorderBrush="White">
             </sdk:Label>
             
         </StackPanel>
 
-        <StackPanel Name="TeamsListStackPanel" Grid.RowSpan="2" Orientation="Vertical" HorizontalAlignment="Left" Height="Auto" Width="320" Margin="3,3,0,6">
+        <StackPanel Name="TeamsListStackPanel" Grid.RowSpan="2" Orientation="Vertical" HorizontalAlignment="Left" Height="Auto" Width="350"  Grid.ColumnSpan="1">
                 <!--Button to add a Team and it's Statistics-->
             
 
@@ -130,7 +129,13 @@
         </telerik:RadTileView>
 
     </Grid>
-
+    <UserControl.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="Black" Offset="0.528" />
+            <GradientStop Color="#FFFF6E00" Offset="0.008" />
+            <GradientStop Color="#FFFF6E07" Offset="1" />
+        </RadialGradientBrush>
+    </UserControl.Background>
 </UserControl>
   
 
