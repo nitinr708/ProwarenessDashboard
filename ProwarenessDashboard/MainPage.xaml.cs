@@ -10,6 +10,15 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Windows.Browser;
+using Telerik.Windows.Controls;
+using Telerik.Windows.Controls.Charting;
+using Telerik.Windows.Examples;
+using System.Windows.Navigation;
+
+
+
+
+
 
 namespace ProwarenessDashboard
 {
@@ -23,30 +32,61 @@ namespace ProwarenessDashboard
 
         HtmlElement theDisplay;
         DisplayElement currentDisplay = DisplayElement.Frame;
-        
-        //private RoutedEventHandler StartButton_Click;
+
+       
         public MainPage()
         {
             InitializeComponent();
+            //this.FillSampleChartData();
             this.SizeChanged += new SizeChangedEventHandler(Page_SizeChanged);
             
-            //string s = @"<Center><a href='http://google.com'>Go To Silverlight</a></Center><br/>You Can put some HTML here, it will be displayed in the box below";
-            //this.HtmlBox.Text = s;
+          
+        }
+        public void AxisX_RangeChanged(object sender, EventArgs e)
+        {
+            Axis x = (Axis)sender;
+            ChangeXAxisLabels(x);
+        }
+
+        public static void ChangeXAxisLabels(Axis x)
+        {
+            string[] months = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+            foreach (TickPoint tick in x.TickPoints)
+            {
+                int month = Convert.ToInt32(tick.CurrentIndex);
+                tick.Label = months[month];
+            }
         }
 
      
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-
            List<Team> teamsList = Prowareness.GetTeams();
-            
+          
+        Telerik.Windows.Controls.RadChart radChart = new Telerik.Windows.Controls.RadChart();
+        radChart.DefaultView.ChartArea.AxisX.IsDateTime = true;
+        radChart.DefaultView.ChartArea.AxisX.Step = 5;
+        radChart.DefaultView.ChartArea.AxisX.LabelStep = 2;
+        radChart.DefaultView.ChartArea.AxisX.StepLabelLevelCount = 3;
+        radChart.DefaultView.ChartArea.AxisX.StepLabelLevelHeight = 10;
+        radChart.DefaultView.ChartArea.AxisX.DefaultLabelFormat = "dd-MMM";
+        //....
+        SeriesMapping sm = new SeriesMapping();
+        sm.SeriesDefinition = new SplineSeriesDefinition();
+        //....
+        sm.ItemMappings.Add( new ItemMapping( "Date", DataPointMember.XValue ) );
+        sm.ItemMappings.Add( new ItemMapping( "Value", DataPointMember.YValue ) );
+        radChart.SeriesMappings.Add( sm );
+        
+
+        
             foreach (Team team in teamsList)
             {
                 addTeamTab(team);
             }
         }
 
-
+        
         public void addTeamTab(Team team)
         {
 

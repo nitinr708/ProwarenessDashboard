@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProwarenessDashboard", "..\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingProwarenessDashBoard", "..\TestingProwarenessDashBoard\TestingProwarenessDashBoard.csproj", "{ABA51980-7C75-4B30-9DFA-23CB6AAC0EFD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2BAACBA3-54B6-43BE-8637-7A953A6F2F14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
