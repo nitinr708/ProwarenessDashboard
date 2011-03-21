@@ -12,9 +12,7 @@ using System.Windows.Shapes;
 using System.Windows.Browser;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.Charting;
-using System.Collections.Generic;
-using System.Windows;
-using System.Windows.Controls;
+
 
 
 
@@ -38,7 +36,7 @@ namespace ProwarenessDashboard
         public MainPage()
         {
             InitializeComponent();
-            //this.FillSampleChartData();
+         
             this.SizeChanged += new SizeChangedEventHandler(Page_SizeChanged);
             VelocityChart.Loaded += new RoutedEventHandler(VelocityUC_Loaded);
             BurnDown.Loaded += new RoutedEventHandler(BurnLoadUC_Loaded);
@@ -59,7 +57,7 @@ namespace ProwarenessDashboard
             burndown.Add(new BurnDownTrend() { Day = "Wed", Points = 40 });
             burndown.Add(new BurnDownTrend() { Day = "Thu", Points = 30 });
             burndown.Add(new BurnDownTrend() { Day = "Fri", Points = 20 });
-            //this.DataContext = burndown;
+           
             BurnDown.DataContext = burndown;
         }
 
@@ -104,21 +102,7 @@ namespace ProwarenessDashboard
             public int Quality { get; set; }
         }
 
-        public void AxisX_RangeChanged(object sender, EventArgs e)
-        {
-            Axis x = (Axis)sender;
-            ChangeXAxisLabels(x);
-        }
-
-        public static void ChangeXAxisLabels(Axis x)
-        {
-            string[] months = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
-            foreach (TickPoint tick in x.TickPoints)
-            {
-                int month = Convert.ToInt32(tick.CurrentIndex);
-                tick.Label = months[month];
-            }
-        }
+        
 
      
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -234,7 +218,8 @@ namespace ProwarenessDashboard
             }
 
             senderButton.BorderThickness = new Thickness(2);
-            senderButton.Background = new SolidColorBrush(Colors.White);
+            senderButton.Background = new SolidColorBrush(Colors.Blue);
+            
             senderButton.FontWeight = FontWeights.ExtraBold;
             senderButton.BorderBrush = new SolidColorBrush(Colors.Black);
             Button team = (Button) sender;
@@ -301,6 +286,7 @@ namespace ProwarenessDashboard
         }
 
         public Button btnTeam { get; set; }
+
     }
 }
 

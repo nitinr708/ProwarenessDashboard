@@ -79,13 +79,14 @@
                 <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <!-- StackPanel to hold the Webcam Control Buttons -->
-        <StackPanel Name="labelStackPanel" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="1" Margin="452,0,322,0" Width="573">
-            <sdk:Label Name="Heading" Content="Prowareness Dashboard" FontSize="40" FontStyle="Normal" Background="#00FFFCFC" Width="576" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF0B1655" FontWeight="Bold" BorderBrush="White">
-            </sdk:Label>
+        <StackPanel Name="labelStackPanel" Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="0"  Grid.ColumnSpan="2">
+            <Border></Border>
+            <Image Name="ISenseProwareness" Source="iSense_Prowareness_RGB_display.png" HorizontalAlignment="Left" Height="56"></Image>
+            <sdk:Label Name="Heading" Content="iDashboard" FontSize="48" FontStyle="Normal" Background="#00FFFCFC" Width="776" Foreground="#FF0B1655" FontWeight="Bold" HorizontalAlignment="Right" BorderBrush="White" Height="73"></sdk:Label>
             
         </StackPanel>
 
-        <StackPanel Name="TeamsListStackPanel" Grid.RowSpan="2" Orientation="Vertical" HorizontalAlignment="Left" Height="Auto" Width="350"  Grid.ColumnSpan="1">
+        <StackPanel Name="TeamsListStackPanel" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Left" Height="Auto" Width="350"  Grid.ColumnSpan="1">
                 <!--Button to add a Team and it's Statistics-->
             
 
@@ -122,12 +123,12 @@
                     </chartingToolkit:Chart.Series>
                 </chartingToolkit:Chart>
             </telerik:RadTileViewItem>
-            <telerik:RadTileViewItem x:Name="RadTileViewItem4" TileState="Restored" Background="Gray" Header="Video" >
-                <Grid x:Name="FrameContainer"   />
+            <telerik:RadTileViewItem x:Name="RadTileViewItem4" TileState="Restored" Background="Gray" Header="Video"  >
+                <Grid x:Name="FrameContainer" SizeChanged="FrameContainer_SizeChanged"  />
     
     </telerik:RadTileViewItem>
         </telerik:RadTileView>
-
+        
     </Grid>
     <UserControl.Background>
         <RadialGradientBrush>
